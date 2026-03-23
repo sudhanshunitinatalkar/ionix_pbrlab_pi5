@@ -24,7 +24,7 @@ nix run github:nix-community/plasma-manager
 ## command to print file content of this project
 
 ```bash
-find . -type f -not -path '*/\.*' -not -name 'flake.lock' -not -name '*.jpg' -print0 \
+find . -type f -not -path '*/\.*' -not -name 'flake.nix.backup.nix' -not -name '*.jpg' -print0 \
   | while IFS= read -r -d '' file; do
       echo "┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
       echo "┃  $file"
@@ -35,3 +35,12 @@ find . -type f -not -path '*/\.*' -not -name 'flake.lock' -not -name '*.jpg' -pr
       echo ""
     done
 ```
+sudo nix run github:nix-community/disko -- --mode disko ./modules/hosts/ionix_pbrlab_pi5/configuration/disko.nix
+
+# 1. Download the release zip file
+wget https://github.com/worproject/rpi5-uefi/releases/download/v0.3/RPi5_UEFI_Release_v0.3.zip
+
+# 2. Extract the contents directly into the boot partition
+sudo nix run nixpkgs#unzip -- RPi5_UEFI_Release_v0.3.zip -d /mnt/boot/
+
+sudo nixos-install --flake .#ionixpbrlabpi5 
