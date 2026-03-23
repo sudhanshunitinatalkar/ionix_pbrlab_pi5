@@ -82,8 +82,8 @@
           enable = false;
           tunnels = {
             # mqtt
-            "a051417b-c023-4dfb-a862-05eae605fbcf" = {
-              credentialsFile = "/home/pbr/.cloudflared/a051417b-c023-4dfb-a862-05eae605fbcf.json";
+            "3510fb04-d9a4-4a90-9f4e-f55d4d11097f" = {
+              credentialsFile = "/home/pbr/.cloudflared/3510fb04-d9a4-4a90-9f4e-f55d4d11097f.json";
               ingress = {
                 "mqtt.eltros.in" = "http://localhost:3001";        
               };
