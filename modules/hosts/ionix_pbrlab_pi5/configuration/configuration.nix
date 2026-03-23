@@ -93,10 +93,6 @@
         };
     };
 
-    environment.systemPackages = with pkgs; [
-      tree util-linux vim wget curl git gptfdisk htop pciutils home-manager
-    ];
-
     i18n.defaultLocale = "en_US.UTF-8";
     console.keyMap = "us";
   };
