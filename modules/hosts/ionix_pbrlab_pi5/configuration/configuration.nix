@@ -79,7 +79,7 @@
         };
 
         cloudflared = {
-          enable = false;
+          enable = true;
           tunnels = {
             # mqtt
             "3510fb04-d9a4-4a90-9f4e-f55d4d11097f" = {
